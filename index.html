@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Introducão ao CSS</h1>
+        <hr>
+
+        <h2>1. HTML e CSS: Estrutura e estilo</h2>
+        <p>
+            O HTML cria a Estrutura da página (títulos, parágrafos, imagens),
+            enquanto o CSS define <b>como tudo vai aparecer</b> -cores, fontes,
+            tamanhos, bordas, espaçamentos e posicionamento.
+        </p>
+
+        <div class="exemplo" style="padding: 10px; border: 1px solid #ccc;">
+            <h3>HTML</h3>
+            <code>&lt;h1&gt;Teste 1&lt;/h1&gt;<br>&lt;p&gt;Teste 2 &lt;/p&gt;</code>
+            <h3>CSS</h3>
+            <code>h1 {color: blue; } <br> p { color:gray; }</code>
+        </div>
+
+        <p><b>Observação: </b> O navegador interpreta primeiro o HTML, criando a estrutura
+            da página, e depois aplica o CSS, alterando a a aparência visual</p>
+
+        <hr>
+
+        <h1>2. Como aplicar o CSS</h1>
+        <p>Existem três maneiras de aplicar o CSS</p>
+
+        <h3>2.1 CSS inline</h3>
+
+        <p>você escreve o estilo direto na tag HTML usando o atributo
+            <code>style</code>
+        </p>
+
+        <code>&lt;p style="color: red;"&gt;Texto vermelho&lt;/p&gt;</code>
+        <div class="exemplo" style="color:red;">Texto vermelho Utilizando CSS Inline</div>
+        <p>
+            <b>Quando usar:</b> apenas para testes rápidos. evitem em projetos grandes,
+            porque dificulta a manutenção
+        </p>
+
+        <hr>
+
+        <h3>2.2 Css Interno</h3>
+        <p>
+            você coloca as regras dentro da tags
+            <code>&lt;style&gt;</code> no <code>&lt;head&gt;</code> do HTML.
+        </p>
+
+        <div class="exemplo">
+            <code>
+                &lt;style&gt; <br>
+                p { color: blue } <br>
+                &lt;/style&gt;
+            </code>
+
+            <p style="color: blue;">Texto azul usando o CSS Interno</p>
+        </div>
+        <p><b>Quando utilizar:</b> útil para paginas pequenas ou para testar rapidamente sem
+            criar arquivos extras
+        </p>
+
+        <hr>
+
+        <h3>2.3. CSS Externo</h3>
+
+        <p>O estilo fica em um arquivo separado, como <b>style.css</b>.
+            Depois você vincula com <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+        </p>
+
+        <p>
+            é a forma mais organizada e usada em projetos reais, pois mentém o código limpo e reutilizável.
+        </p>
+
+        <hr>
+
+        <h2>3. Sintaxe básica do CSS</h2>
+        <p>Uma regra CSS tem três partes: </p>
+        <ul>
+            <li><b>selector: </b>diz ao navegador quais elementos estilizar</li>
+            <li><b>propriedade: </b>o que você quer mudar (cor, tamanho, etc...)</li>
+            <li><b>valor:</b>o detalhe do estilo aplicado</li>
+        </ul>
+
+        <div class="exemplo">
+            <code>p { color: green; }</code>
+            <p style="color: green"> Texto verde aplicado com CSS</p>
+        </div>
+
+        <hr>
+
+        <h2>4. Seletores</h2>
+        <p>Seleciona os elementos que receberão os estilos. </p>
+
+        <h3>4.1 Selecionar por tag</h3>
+        <code>h1 style="{ color: blue; }"</code>
+        <h1 style="color: blue">Titulo afetado pelo seletor de tag</h1>
+
+        <h3>4.2. Seletor por classe</h3>
+
+        <code>.destaque { backgound: yelow; } </code>
+        <div class="exemplo" style="background: yellow">
+            Elemento com classe "destaque".
+        </div>
+
+        <h3>4.3. seletor por ID</h3>
+        <code>#inportante { color: red }</code>
+        <div class="exemplo" style="color: red">
+            elemento com id "Importante".
+        </div>
+
+        <hr>
+
+        <h2>5. Propriedades de texto</h2>
+
+        <h3>5.1.</h3>
+        <p>Define a cor de um texto.</p>
+        <div class="exemplo" style="color: #1A989E;">Texto azul com <code>color</code>.</div>
+
+        <h2>font-famili</h2>
+        <p>
+            Define a fonte usada. O navegador usa a primeira fonte disponivel e, se não emcontrar, passa para próxima.
+        </p>
+        <div class="exemplo" style="font-family: 'Corior New', monoespace;">
+            Fonte Corior New aplicada
+        </div>
+
+        <h3>5.3. font-size</h3>
+        <p>Define o tamanho em pixels, em (em) ou porcentagem. Pode aumentar ou diminuir a legibilidade.
+        </p>
+
+        <div class="exemplo" style="font-size: 24px;">
+            texto grande com <code>font-size: 24px</code>
+        </div>
+
+        <h3>5.4. text-aling</h3>
+        <p>controla o alinhamento do texto: <code>left</code> <code>right</code> <code>center</code>
+            <code>justify</code>.</p>
+        <div class="exemplo" style="text-align: center">
+            texto centralizado com <code>text-aling: center;</code>
+        </div>
+        <div class="exemplo" style="text-align: left">
+            texto ao lado esquerdo com <code>text-aling: left;</code>
+        </div>
+        <div class="exemplo" style="text-align: right">
+            texto ao lado direito com <code>text-aling: right;</code>
+        </div>
+        <div class="exemplo" style="text-align: justify">
+            texto justificado com <code>text-aling: justify</code>
+        </div>
+
+        <hr>
+
+        <h2>6. background</h2>
+        <p>Define a cor ou a imagem de fundo de um elemento. Pode melhorar a aparência ou destacar seções importantes.
+        </p>
+        <div class="exemplo" style="background: lightblue; padding: 10px;">
+            fundo azul claro aplicado com <code>background</code>.
+        </div>
+
+        <hr>
+
+        <h2>7. Largura e altura</h2>
+        <p>Controlan o tamanho de um elemento. Valores podem ser em pixels % ou rem
+        </p>
+
+        <div class="exemplo" style="width:200px; height: 100px; background: #e0f7f7;">
+            Largura de 200px e altura de 100px
+        </div>
+
+        <hr>
+
+        <h2>8. Bordas e cantos arredondados</h2>
+        <p>As bordas definem limites visuais. você pode escolher cor, estilos e largura
+        </p>
+
+        <h3>8.1. border</h3>
+        <div class="exemplo" style="border: 4px dashed red; padding: 10px;">
+            Borda vermelha tracejada.
+        </div>
+
+        <h3>8.2 border-radius</h3>
+        <p>arredonda os cantos de uma borda. Ideal para cartões, botões e elementos visuais suaves.</p>
+        <div class="exemplo" style="border: 2px solid #333;
+            border-radius: 15px; padding: 20px;">
+            Borda arredondada com <code>border-radius: 15px;</code>
+        </div>
+
+        <hr>
+
+        <h2>9. Box model</h2>
+        <p>Todo elemento HTML é uma "caixa" com 4 camadas:</p>
+        <ul>
+            <li><b>Content: </b>O conteudo (texto, imagem, video )</li>
+            <li><b>Padding: </b>espaaço interno entre conteudo e borda</li>
+            <li><b>Border: </b>borda ao redor do padding</li>
+            <li><b>Margin: </b>espaço externo que separa a caixa de outros elementos</li>
+        </ul>
+
+        <img src="img/margin_padding.jpg">
+
+        <h3>9.1. Margin</h3>
+        <p>define o espaaço externo pode ser individual(top, botton, left, right)
+        </p>
+        <div class="exemplo" style="margin: 30px; background: #eef;">
+            margem externo de 30 px.
+        </div>
+
+        <h3>9.2. Padding</h3>
+        <p>Define o espaço interno entre o conteudo e a borda
+            Facilita a leitura e evita que o conteúdo fique colado à borda .
+        </p>
+        <div class="exemplo" style="padding: 30px; background: #eef;">
+            padding interno de 30 px.
+        </div>
+
+        <h3>9.3. Combinando (margin e padding)</h3>
+        <p>Você pode ajustar padding, border e margin juntos para criar layouts</p>
+        <div class="exemplo" style="padding: 20px; border: 2px solid #333; margin: 20px; background: #fff;">
+            Content + Padding + Border + Margin = Box Conpleta
+        </div>
+    </div>
+</body>
+
+</html>
